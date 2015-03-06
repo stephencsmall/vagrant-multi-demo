@@ -1,0 +1,11 @@
+- name: install Percona release RPM (GPG Key and Yum Repo)
+  yum: pkg=http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm state=present
+- name: install Percona Server packages
+  yum: pkg={{ item }} state=latest
+  with_items:
+    - Percona-Server-server-56
+    - MySQL-python
+- name: start Percona Server
+  service: name=mysql state=started
+- name: create localdb mysql user
+  mysql_user: name=localdb password=localdb priv=*.*:ALL,GRANT host='%' state=present

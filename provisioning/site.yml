@@ -1,0 +1,2 @@
+- include: db_hosts.yml
+- include: tomcat_hosts.yml
