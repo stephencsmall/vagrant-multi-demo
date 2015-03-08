@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
         db.vm.hostname = "db"
         # Set up a forwarded port from guest to host
         db.vm.network "forwarded_port", guest: 3306, host: 3306
-        # Create a private network for machine <-> communication
+        # Create a private network for machine <-> machine communication
         db.vm.network "private_network", ip: "10.253.0.10"
         # Set some VM parameters in the Virtualbox provider
         db.vm.provider "virtualbox" do |vb|
@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
         tomcat.vm.hostname = "tomcat"
         # Set up a forwarded port from guest to host
         tomcat.vm.network "forwarded_port", guest: 8080, host:8088
-        # Create a private network for machine <-> communication
+        # Create a private network for machine <-> machine communication
         tomcat.vm.network "private_network", ip: "10.253.0.20"
         # Set some VM parameters in the Virtualbox provider
         tomcat.vm.provider "virtualbox" do |vb|
