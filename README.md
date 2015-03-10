@@ -7,4 +7,5 @@ A vagrant example for multi-machine configuration and provisioning with Ansible.
  - Vagrant 1.7 or newer
  - CentOS 6.4*
 
-* * this project does not ship with a Vagrant box! *
+
+**This project does not provide a base Vagrant box for you! See vagrantbox.es to download one.*
