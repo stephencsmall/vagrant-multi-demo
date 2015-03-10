@@ -8,4 +8,4 @@ A vagrant example for multi-machine configuration and provisioning with Ansible.
  - CentOS 6.4*
 
 
-**This project does not provide a base Vagrant box for you! See vagrantbox.es to download one.*
+**This project does not provide a base Vagrant box for you! Visit [vagrantbox.es](http://www.vagrantbox.es/) to download one.*
