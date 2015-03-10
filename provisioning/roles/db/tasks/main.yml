@@ -13,3 +13,6 @@
 
 - name: create localdb mysql user
   mysql_user: name=localdb password=localdb priv=*.*:ALL,GRANT host='%' state=present
+
+- name: create some test data in the database
+  mysql_db: name=operational_data state=present
