@@ -21,4 +21,4 @@ This example borrows heavily from the [tomcat-standalone](https://github.com/ans
 
 ## Users
 
-- DB: localdb/localdb 
+- DB: `localdb/localdb`
