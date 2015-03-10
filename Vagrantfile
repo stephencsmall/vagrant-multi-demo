@@ -46,8 +46,6 @@ Vagrant.configure(2) do |config|
             "db" => ["db"],
             "tomcat" => ["tomcat"]
         }
-        # Don't limit yourself to one Ansible target at a time (parallel execution)
-        ansible.limit = 'all'
     end
 
 end
