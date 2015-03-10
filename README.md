@@ -16,5 +16,9 @@ This example borrows heavily from the [tomcat-standalone](https://github.com/ans
 
 ## Forwarded Ports
 
-- DB guest 3306 -> host 3306 *Connect to localhost:3306 with your favorite MySQL client!*
-- Tomcat guest 8080 -> host 8088 *Browse to localhost:8088 to see Tomcat*
+- DB: `guest 3306 -> host 3306`  *Connect to localhost:3306 with a MySQL client.*
+- Tomcat: `guest 8080 -> host 8088`  *Browse to localhost:8088 to see Tomcat.*
+
+## Users
+
+- DB: localdb/localdb 
