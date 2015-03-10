@@ -9,3 +9,7 @@ A vagrant example for multi-machine configuration and provisioning with Ansible.
 
 
 **This project does not provide a base Vagrant box for you! Visit [vagrantbox.es](http://www.vagrantbox.es/) to download one.*
+
+## Attribution 
+
+This example borrows heavily from the [tomcat-standalone](https://github.com/ansible/ansible-examples/tree/master/tomcat-standalone) example provided by ansible-examples. It is modified to provision Tomcat 6 instead, and it makes assumptions for a Vagrant-only environment.
