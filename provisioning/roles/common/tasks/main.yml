@@ -1,2 +1,2 @@
-- name: install Vim because of reasons
-  yum: pkg=vim state=present
+#- name: install Vim because of reasons
+#  yum: pkg=vim state=present
