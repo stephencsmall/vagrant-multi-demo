@@ -1,3 +1,4 @@
+---
 - hosts: tomcat
   sudo: true
   roles:
