@@ -6,7 +6,7 @@
   file: path=/opt/apache-tomcat-6.0.43 state=directory
 
 - name: Extract archive
-  unarchive: src=apache-tomcat-6.0.43.tar.gz dest=/opt owner=vagrant group=vagrant
+  unarchive: src=apache-tomcat-6.0.43.tar.gz dest=/opt owner=vagrant group=vagrant creates=/opt/apache-tomcat-6.0.43
 
 - name: Symlink tomcat dir
   file: src=/opt/apache-tomcat-6.0.43 path=/opt/tomcat state=link
