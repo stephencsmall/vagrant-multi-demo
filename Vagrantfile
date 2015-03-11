@@ -6,7 +6,8 @@ Vagrant.configure(2) do |config|
     config.vm.box = "centos-64"
     # Prevent Vagrant from creating a new private key for each machine in the configuration
     config.ssh.insert_key = false
-
+    # Don't do the default vagrant synced folder, since I'm using multiple machines.
+    config.vm.synced_folder ".", "/vagrant", disabled: true
     # Create a databse host
     config.vm.define "db" do |db|
         # Set the hostname
@@ -30,6 +31,8 @@ Vagrant.configure(2) do |config|
         tomcat.vm.network "forwarded_port", guest: 8080, host:8088
         # Create a private network for machine <-> machine communication
         tomcat.vm.network "private_network", ip: "10.253.0.20"
+        # Sync the webapps folder to the host system
+        config.vm.synced_folder "tomcat_webapps/", "/opt/tomcat/webapps/", create: false
         # Set some VM parameters in the Virtualbox provider
         tomcat.vm.provider "virtualbox" do |vb|
             vb.memory = "1024"
