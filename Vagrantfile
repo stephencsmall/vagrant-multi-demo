@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
         db.vm.provider "virtualbox" do |vb|
             vb.memory = "512"
         end
+        config.vm.post_up_message = "DB server is running, connect to localdb@localhost:3306"
     end
 
     # Create a tomcat host
@@ -36,6 +37,7 @@ Vagrant.configure(2) do |config|
         tomcat.vm.provider "virtualbox" do |vb|
             vb.memory = "1024"
         end
+        config.vm.post_up_message = "Tomcat server is running, connect to localhost:8088"
     end
 
     # After creating all VMs, perform provisioning
