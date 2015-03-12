@@ -3,7 +3,7 @@
   yum: name=java-1.6.0-openjdk state=present
 
 - name: Extract archive
-  unarchive: src=apache-tomcat-6.0.43.tar.gz dest=/opt owner=vagrant group=vagrant creates=/opt/apache-tomcat-6.0.43
+  unarchive: src=apache-tomcat-6.0.43.zip dest=/opt owner=vagrant group=vagrant creates=/opt/apache-tomcat-6.0.43
 
 - name: Symlink tomcat dir
   file: src=/opt/apache-tomcat-6.0.43 path=/opt/tomcat state=link
