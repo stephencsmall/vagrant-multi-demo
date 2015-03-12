@@ -1,2 +1,4 @@
 .vagrant/
 .metadata/
+opt/apache-tomcat*
+opt/tomcat/

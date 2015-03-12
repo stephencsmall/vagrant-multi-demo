@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
         # Create a private network for machine <-> machine communication
         tomcat.vm.network "private_network", ip: "10.253.0.20"
         # Sync the webapps folder to the host system
-        config.vm.synced_folder "tomcat_webapps/", "/opt/tomcat/webapps/", create: false
+        config.vm.synced_folder "opt/", "/opt/"
         # Set some VM parameters in the Virtualbox provider
         tomcat.vm.provider "virtualbox" do |vb|
             vb.memory = "1024"

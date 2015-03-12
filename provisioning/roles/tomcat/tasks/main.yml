@@ -2,9 +2,6 @@
 - name: Install Java 6
   yum: name=java-1.6.0-openjdk state=present
 
-- name: Create /opt/tomcat folder
-  file: path=/opt/apache-tomcat-6.0.43 state=directory
-
 - name: Extract archive
   unarchive: src=apache-tomcat-6.0.43.tar.gz dest=/opt owner=vagrant group=vagrant creates=/opt/apache-tomcat-6.0.43
 
